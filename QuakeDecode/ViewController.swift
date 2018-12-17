@@ -9,9 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var mTableView :UITableView!
+    var mTableView: UITableView!
     private let cellIdentifier = "cellIdentifier"
-    private var quakeList :[Quake] = []
+    private var quakeList: [Quake] = []
     
     //MARK: - viewController life cycle
     deinit {
@@ -37,8 +37,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         guard let list = list else { print("load failed."); return }
         
         quakeList = list
-        DispatchQueue.main.async {
-            self.mTableView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            self?.mTableView.reloadData()
         }
     }
     

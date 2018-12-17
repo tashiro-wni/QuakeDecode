@@ -8,25 +8,25 @@
 
 import Foundation
 
-struct QuakeList : Decodable {
-    let list :[Quake]
-    private enum CodingKeys : String, CodingKey {
+struct QuakeList: Decodable {
+    let list: [Quake]
+    private enum CodingKeys: String, CodingKey {
         case list = "quake"
     }
 }
 
-struct Quake : Decodable {
-    let name :String
-    let spot :String
-    let cell_atime :String
-    let atimeString :String
-    let latlon :String
-    let magnitude :String
-    let depth :String
-    let maxclass :String
-    let wave :String
-    let points :String
-    let image :String
+struct Quake: Decodable {
+    let name: String
+    let spot: String
+    let cell_atime: String
+    let atimeString: String
+    let latlon: String
+    let magnitude: String
+    let depth: String
+    let maxclass: String
+    let wave: String
+    let points: String
+    let image: String
 }
 
 class QuakeLoader {
