@@ -13,7 +13,18 @@
 		122711FA1F1C56AC00E322B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 122711F91F1C56AC00E322B8 /* Assets.xcassets */; };
 		122711FD1F1C56AC00E322B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 122711FB1F1C56AC00E322B8 /* LaunchScreen.storyboard */; };
 		122712051F1C56D100E322B8 /* Quake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122712041F1C56D100E322B8 /* Quake.swift */; };
+		F938275621E8A1BB00572F37 /* QuakeDecodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938275521E8A1BB00572F37 /* QuakeDecodeTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F938275821E8A1BB00572F37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 122711E71F1C56AC00E322B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 122711EE1F1C56AC00E322B8;
+			remoteInfo = QuakeDecode;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		122711EF1F1C56AC00E322B8 /* QuakeDecode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuakeDecode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +35,20 @@
 		122711FC1F1C56AC00E322B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		122711FE1F1C56AC00E322B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		122712041F1C56D100E322B8 /* Quake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quake.swift; sourceTree = "<group>"; };
+		F938275321E8A1BB00572F37 /* QuakeDecodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuakeDecodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F938275521E8A1BB00572F37 /* QuakeDecodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeDecodeTests.swift; sourceTree = "<group>"; };
+		F938275721E8A1BB00572F37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		122711EC1F1C56AC00E322B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F938275021E8A1BB00572F37 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				122711F11F1C56AC00E322B8 /* QuakeDecode */,
+				F938275421E8A1BB00572F37 /* QuakeDecodeTests */,
 				122711F01F1C56AC00E322B8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				122711EF1F1C56AC00E322B8 /* QuakeDecode.app */,
+				F938275321E8A1BB00572F37 /* QuakeDecodeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +88,15 @@
 				122711FE1F1C56AC00E322B8 /* Info.plist */,
 			);
 			path = QuakeDecode;
+			sourceTree = "<group>";
+		};
+		F938275421E8A1BB00572F37 /* QuakeDecodeTests */ = {
+			isa = PBXGroup;
+			children = (
+				F938275521E8A1BB00572F37 /* QuakeDecodeTests.swift */,
+				F938275721E8A1BB00572F37 /* Info.plist */,
+			);
+			path = QuakeDecodeTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,19 +119,42 @@
 			productReference = 122711EF1F1C56AC00E322B8 /* QuakeDecode.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F938275221E8A1BB00572F37 /* QuakeDecodeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F938275C21E8A1BB00572F37 /* Build configuration list for PBXNativeTarget "QuakeDecodeTests" */;
+			buildPhases = (
+				F938274F21E8A1BB00572F37 /* Sources */,
+				F938275021E8A1BB00572F37 /* Frameworks */,
+				F938275121E8A1BB00572F37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F938275921E8A1BB00572F37 /* PBXTargetDependency */,
+			);
+			name = QuakeDecodeTests;
+			productName = QuakeDecodeTests;
+			productReference = F938275321E8A1BB00572F37 /* QuakeDecodeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		122711E71F1C56AC00E322B8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = test;
 				TargetAttributes = {
 					122711EE1F1C56AC00E322B8 = {
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = 1010;
+					};
+					F938275221E8A1BB00572F37 = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 122711EE1F1C56AC00E322B8;
 					};
 				};
 			};
@@ -117,6 +172,7 @@
 			projectRoot = "";
 			targets = (
 				122711EE1F1C56AC00E322B8 /* QuakeDecode */,
+				F938275221E8A1BB00572F37 /* QuakeDecodeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -129,6 +185,13 @@
 				122711FD1F1C56AC00E322B8 /* LaunchScreen.storyboard in Resources */,
 				122711FA1F1C56AC00E322B8 /* Assets.xcassets in Resources */,
 				122711F81F1C56AC00E322B8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F938275121E8A1BB00572F37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +208,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F938274F21E8A1BB00572F37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F938275621E8A1BB00572F37 /* QuakeDecodeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F938275921E8A1BB00572F37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 122711EE1F1C56AC00E322B8 /* QuakeDecode */;
+			targetProxy = F938275821E8A1BB00572F37 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		122711F61F1C56AC00E322B8 /* Main.storyboard */ = {
@@ -181,6 +260,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -188,6 +268,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -238,6 +319,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -245,6 +327,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -278,6 +361,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 97JN7SJ3KH;
 				INFOPLIST_FILE = QuakeDecode/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -293,6 +377,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 97JN7SJ3KH;
 				INFOPLIST_FILE = QuakeDecode/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -301,6 +386,49 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F938275A21E8A1BB00572F37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 97JN7SJ3KH;
+				INFOPLIST_FILE = QuakeDecodeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = test.QuakeDecodeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuakeDecode.app/QuakeDecode";
+			};
+			name = Debug;
+		};
+		F938275B21E8A1BB00572F37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 97JN7SJ3KH;
+				INFOPLIST_FILE = QuakeDecodeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = test.QuakeDecodeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuakeDecode.app/QuakeDecode";
 			};
 			name = Release;
 		};
@@ -321,6 +449,15 @@
 			buildConfigurations = (
 				122712021F1C56AC00E322B8 /* Debug */,
 				122712031F1C56AC00E322B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F938275C21E8A1BB00572F37 /* Build configuration list for PBXNativeTarget "QuakeDecodeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F938275A21E8A1BB00572F37 /* Debug */,
+				F938275B21E8A1BB00572F37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
