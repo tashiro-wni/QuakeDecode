@@ -1,13 +1,22 @@
+# Gem
+Gemfile.lock
+
+# fastlane
+fastlane/test_output
+fastlane/report.xml
+
 # CocoaPods
 Pods
 Podfile.lock
 
 # Xcode
-*.xcworkspace
+*.xcworkspace/*
+!*.xcworkspace/contents.xcworkspacedata 
 xcuserdata
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
-!*.xcworkspace/contents.xcworkspacedata
+*.ipa
+*.zip
 Build
 .svn
 .DS_Store
