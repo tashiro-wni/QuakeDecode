@@ -7,16 +7,32 @@ fastlane/report.xml
 
 # CocoaPods
 Pods
-Podfile.lock
+#Podfile.lock
+
+#TAM fat_framewark
+fat_frameworks
+TAMFramework
 
 # Xcode
-*.xcworkspace/*
-!*.xcworkspace/contents.xcworkspacedata 
-xcuserdata
-*.xcodeproj/*
-!*.xcodeproj/project.pbxproj
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+build/
+DerivedData/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
 *.ipa
 *.zip
-Build
 .svn
 .DS_Store
+
+# SnapshotTest
+snapshotTests/FailureDiffs
