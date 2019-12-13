@@ -8,41 +8,38 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var mTableView: UITableView!
+class ViewController: UIViewController {
+    private lazy var tableView = UITableView(frame: view.bounds, style: .plain)
     private let cellIdentifier = "cellIdentifier"
     private var quakeList: [Quake] = []
     
-    //MARK: - viewController life cycle
+    // MARK: - viewController life cycle
     deinit {
-        if mTableView != nil {
-            mTableView.delegate = nil
-            mTableView.dataSource = nil
-        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mTableView = UITableView(frame: self.view.bounds, style: .plain)
-        mTableView.delegate = self
-        mTableView.dataSource = self
-        mTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
-        self.view.addSubview(mTableView)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        view.addSubview(tableView)
         
         QuakeLoader.get(completion: dataLoaded(_:))
     }
     
-    func dataLoaded(_ list: [Quake]?) {
+    private func dataLoaded(_ list: [Quake]?) {
         guard let list = list else { print("load failed."); return }
         
         quakeList = list
         DispatchQueue.main.async { [weak self] in
-            self?.mTableView.reloadData()
+            self?.tableView.reloadData()
         }
     }
+}
     
-    //MARK: - UITableViewDataSource
+// MARK: - UITableViewDelegate, UITableViewDataSource
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return quakeList.count
     }
@@ -50,13 +47,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         
-        if indexPath.row < quakeList.count {
-            let quake = quakeList[indexPath.row]
-            cell.textLabel?.text = "\(quake.cell_atime), \(quake.spot), M\(quake.magnitude), 最大震度:\(quake.maxclass)"
-        }
+        guard indexPath.row < quakeList.count else { return cell }
+        
+        let quake = quakeList[indexPath.row]
+        cell.textLabel?.text = "\(quake.cell_atime), \(quake.spot), M\(quake.magnitude), 最大震度:\(quake.maxclass)"
         
         return cell
     }
-    
 }
-
